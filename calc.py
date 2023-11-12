@@ -6,6 +6,7 @@ ProgramStarted = True
 savedcalc = []
 startedhistory = False
 AboutStarted = False
+version = 1.1
 def clearscreen():
         if os.name == "nt":
              os.system("cls")
@@ -18,7 +19,7 @@ def mainmenu():
         if ProgramStarted == True:
              clearscreen()
              ProgramStarted = False
-             print("Basic Calculator 1.0")
+             print("Basic Calculator {0}".format(version))
              print("1. Start Calculator")
              print("2. View History")
              print("3. Clear the Screen")
@@ -135,9 +136,9 @@ def about():
      if AboutStarted == False:
           clearscreen()
           AboutStarted = True
-     print("Basic Calculator 1.0")
+     print("Basic Calculator {0}".format(version))
      print("Written by Aniruddha Ghosh in Python")
-     print("This program is open source, you can free to fork it :)")
+     print("This program is open source, you are free to fork it :)")
      input("\nPress any key for go back to main menu")
      ProgramStarted = True
      AboutStarted = False
